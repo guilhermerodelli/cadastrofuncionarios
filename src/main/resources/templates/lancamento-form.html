@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<meta charset="UTF-8">
+<title>Novo Lançamento</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+body{
+    background:#1e1e1e;
+    color:white;
+}
+
+.card{
+    background:#5e5e5f;
+    border:none;
+    border-radius:15px;
+}
+
+label{
+    color:#ffffff;
+    font-weight:bold;
+    margin-bottom:5px;
+}
+
+.form-control{
+    background:#444343;
+    border:none;
+    color:white;
+}
+
+.form-control:focus{
+    background:#3a3a3a;
+    color:white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container mt-5">
+
+    <div class="card p-4">
+
+        <h2 class="mb-4">Novo Lançamento</h2>
+
+        <form
+            th:action="@{/funcionarios/{id}/lancamentos/salvar(id=${lancamento.funcionario.id})}"
+            th:object="${lancamento}"
+            method="post">
+
+            <div class="mb-3">
+                <label>Data de Lançamento</label>
+                <input type="date"
+                       th:field="*{dataLancamento}"
+                       class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label>Data de Pagamento</label>
+                <input type="date"
+                       th:field="*{dataPagamento}"
+                       class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label>Histórico</label>
+                <input type="text"
+                       th:field="*{historico}"
+                       class="form-control"
+                       placeholder="Ex: Vale Transporte, Vale Refeição, Adiantamento">
+            </div>
+
+            <div class="mb-3">
+                <label>Valor</label>
+                <input type="number"
+                       step="0.01"
+                       th:field="*{valor}"
+                       class="form-control">
+            </div>
+
+            <button type="submit" class="btn btn-success">
+                Salvar Lançamento
+            </button>
+
+            <a th:href="@{/funcionarios/{id}/lancamentos(id=${lancamento.funcionario.id})}"
+               class="btn btn-secondary">
+                Voltar
+            </a>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>
