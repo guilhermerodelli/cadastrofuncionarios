@@ -6,7 +6,7 @@ Aplicação web para gestão de funcionários e lançamentos financeiros, com ex
 
 | Recurso | URL |
 |---------|-----|
-| **Portfólio (Vercel)** | https://cadastrofuncionarios.vercel.app |
+| **Portfólio (Vercel)** | https://cadastrofuncionarios-ruby.vercel.app |
 | **Demo ao vivo (Render)** | https://cadastrofuncionarios.onrender.com |
 | **Repositório** | https://github.com/guilhermerodelli/cadastrofuncionarios |
 
@@ -61,4 +61,4 @@ A pasta `portfolio/` contém a landing page estática. Deploy com Root Directory
 
 ## Texto sugerido para LinkedIn
 
-> Desenvolvi um sistema de cadastro de funcionários com Spring Boot, PostgreSQL e geração de relatórios PDF. Demo: https://cadastrofuncionarios.vercel.app | Código: https://github.com/guilhermerodelli/cadastrofuncionarios
+> Desenvolvi um sistema de cadastro de funcionários com Spring Boot, PostgreSQL e geração de relatórios PDF. Demo: https://cadastrofuncionarios-ruby.vercel.app | Código: https://github.com/guilhermerodelli/cadastrofuncionarios
