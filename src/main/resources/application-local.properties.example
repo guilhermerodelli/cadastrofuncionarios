@@ -1,0 +1,4 @@
+# Perfil local — copie para application-local.properties e ajuste a senha
+spring.datasource.url=jdbc:postgresql://localhost:5432/cadastroclientes
+spring.datasource.username=postgres
+spring.datasource.password=postgres

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sistema de Cadastro de Funcionários — Spring Boot, PostgreSQL, Thymeleaf e geração de PDF.">
+  <title>Sistema de Cadastro de Funcionários | Portfólio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #1e1e1e;
+      --card: #252526;
+      --accent: #0d6efd;
+      --text-muted: #adb5bd;
+    }
+    body {
+      background: var(--bg);
+      color: #fff;
+      min-height: 100vh;
+    }
+    .hero {
+      padding: 4rem 0 2rem;
+    }
+    .card-portfolio {
+      background: var(--card);
+      border: 1px solid #333;
+      border-radius: 16px;
+    }
+    .badge-tech {
+      background: #333;
+      color: #fff;
+      font-weight: 500;
+    }
+    .btn-demo {
+      min-width: 180px;
+    }
+    .feature-icon {
+      font-size: 1.5rem;
+      margin-bottom: .5rem;
+    }
+    footer {
+      color: var(--text-muted);
+      font-size: .9rem;
+    }
+    .cold-start {
+      background: rgba(255, 193, 7, .1);
+      border: 1px solid rgba(255, 193, 7, .3);
+      border-radius: 8px;
+      color: #ffc107;
+      font-size: .875rem;
+    }
+  </style>
+</head>
+<body>
+  <main class="container hero">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <p class="text-uppercase text-muted small mb-2">Projeto de portfólio</p>
+        <h1 class="display-5 fw-bold mb-3">Sistema de Cadastro de Funcionários</h1>
+        <p class="lead text-muted mb-4">
+          Aplicação web completa para gestão de funcionários e lançamentos financeiros,
+          com geração de relatórios em PDF. Desenvolvida com Spring Boot e PostgreSQL.
+        </p>
+
+        <div class="cold-start p-3 mb-4">
+          A demo roda em plano gratuito e pode demorar até 60 segundos na primeira carga após inatividade.
+        </div>
+
+        <div class="d-flex flex-wrap gap-3 mb-5">
+          <a id="demo-link" href="https://cadastrofuncionarios.onrender.com" class="btn btn-primary btn-lg btn-demo" target="_blank" rel="noopener">
+            Ver demo ao vivo
+          </a>
+          <a href="https://github.com/guilhermerodelli/cadastrofuncionarios" class="btn btn-outline-light btn-lg btn-demo" target="_blank" rel="noopener">
+            Código no GitHub
+          </a>
+        </div>
+
+        <div class="card card-portfolio p-4 mb-4">
+          <h2 class="h4 mb-3">Funcionalidades</h2>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="feature-icon">👤</div>
+              <h3 class="h6">CRUD de funcionários</h3>
+              <p class="text-muted small mb-0">Cadastro, edição, busca e exclusão com validação de dados.</p>
+            </div>
+            <div class="col-md-4">
+              <div class="feature-icon">💰</div>
+              <h3 class="h6">Lançamentos</h3>
+              <p class="text-muted small mb-0">Controle de lançamentos vinculados a cada funcionário.</p>
+            </div>
+            <div class="col-md-4">
+              <div class="feature-icon">📄</div>
+              <h3 class="h6">Relatório PDF</h3>
+              <p class="text-muted small mb-0">Exportação de lançamentos em PDF com iText.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card-portfolio p-4 mb-4">
+          <h2 class="h4 mb-3">Stack tecnológica</h2>
+          <div class="d-flex flex-wrap gap-2">
+            <span class="badge badge-tech rounded-pill px-3 py-2">Java 17</span>
+            <span class="badge badge-tech rounded-pill px-3 py-2">Spring Boot 3.5</span>
+            <span class="badge badge-tech rounded-pill px-3 py-2">Spring Data JPA</span>
+            <span class="badge badge-tech rounded-pill px-3 py-2">Thymeleaf</span>
+            <span class="badge badge-tech rounded-pill px-3 py-2">PostgreSQL</span>
+            <span class="badge badge-tech rounded-pill px-3 py-2">Bootstrap 5</span>
+            <span class="badge badge-tech rounded-pill px-3 py-2">iText PDF</span>
+            <span class="badge badge-tech rounded-pill px-3 py-2">Docker</span>
+          </div>
+        </div>
+
+        <div class="card card-portfolio p-4 mb-5">
+          <h2 class="h4 mb-3">Arquitetura de deploy</h2>
+          <p class="text-muted mb-0">
+            Backend containerizado no <strong>Render</strong> (free tier) ·
+            Banco <strong>Neon PostgreSQL</strong> (free tier) ·
+            Esta landing page na <strong>Vercel</strong>.
+          </p>
+        </div>
+
+        <footer class="text-center pb-4">
+          <p class="mb-0">Desenvolvido por Guilherme Rodelli · Projeto para portfólio / LinkedIn</p>
+        </footer>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
