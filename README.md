@@ -1,64 +1,49 @@
-# Sistema de Cadastro de Funcionários
+Sistema de Cadastro de Funcionários
 
-Aplicação web para gestão de funcionários e lançamentos financeiros, com exportação de relatórios em PDF.
+Aplicação web desenvolvida com Java e Spring Boot para gerenciamento de funcionários e lançamentos financeiros.
 
-## Demo e links
 
-| Recurso | URL |
-|---------|-----|
-| **Portfólio (Vercel)** | https://cadastrofuncionarios-ruby.vercel.app |
-| **Demo ao vivo (Render)** | https://cadastrofuncionarios.onrender.com |
-| **Repositório** | https://github.com/guilhermerodelli/cadastrofuncionarios |
+---Funcionalidades---
 
-> A demo no Render usa plano gratuito: após ~15 min de inatividade, a primeira carga pode levar até 60 segundos.
+Cadastro, edição e exclusão de funcionários
+Consulta e busca de registros
+Controle de lançamentos financeiros
+Geração de relatórios em PDF
+Persistência de dados com PostgreSQL
+Tecnologias
+Java 17
+Spring Boot
+Spring Data JPA
+Hibernate
+PostgreSQL
+Thymeleaf
+HTML/CSS
+Maven
+Git e GitHub
 
-## Funcionalidades
+Repositório: https://github.com/guilhermerodelli/cadastrofuncionarios
 
-- CRUD completo de funcionários (nome, CPF, RG, PIS, CTPS, salário, etc.)
-- Lançamentos financeiros por funcionário
-- Geração de relatório PDF dos lançamentos
-- Busca de funcionários
 
-## Stack
+---Como Executar---
 
-- Java 17 · Spring Boot 3.5 · Spring Data JPA · Thymeleaf
-- PostgreSQL · Bootstrap 5 · iText PDF · Docker
+Pré-requisitos
+Java 17
+PostgreSQL instalado e em execução
+VS Code com as extensões Java Extension Pack
 
-## Rodar localmente
+-Passos-
+Clone o repositório: git clone https://github.com/guilhermerodelli/cadastrofuncionarios.git
+Abra o projeto no VS Code.
+Configure o banco de dados PostgreSQL no arquivo application.properties ou crie um arquivo application-local.properties com suas credenciais.
+Aguarde o Maven baixar as dependências.
 
-### Pré-requisitos
+Abra a classe:
+CadastroclientesApplication.java
+Clique em Run Java ou execute a classe pelo VS Code.
 
-- Java 17
-- PostgreSQL rodando localmente
-- Banco `cadastroclientes` criado
+Acesse no navegador: http://localhost:8080
 
-### Passos
 
-```powershell
-cd cadastroclientes
-.\mvnw.cmd spring-boot:run -Dspring-boot.run.profiles=local
-```
+---Objetivo---
 
-Acesse: http://localhost:8080
-
-Credenciais locais padrão em `application-local.properties` (não versionado).
-
-## Deploy
-
-### Backend (Render)
-
-1. Crie um banco no [Neon](https://console.neon.tech)
-2. No [Render](https://dashboard.render.com), use **New → Blueprint** com o `render.yaml` do repo
-3. Configure as variáveis de ambiente:
-   - `SPRING_PROFILES_ACTIVE` = `prod`
-   - `SPRING_DATASOURCE_URL` = `jdbc:postgresql://...?sslmode=require`
-   - `SPRING_DATASOURCE_USERNAME`
-   - `SPRING_DATASOURCE_PASSWORD`
-
-### Portfólio (Vercel)
-
-A pasta `portfolio/` contém a landing page estática. Deploy com Root Directory = `portfolio`.
-
-## Texto sugerido para LinkedIn
-
-> Desenvolvi um sistema de cadastro de funcionários com Spring Boot, PostgreSQL e geração de relatórios PDF. Demo: https://cadastrofuncionarios-ruby.vercel.app | Código: https://github.com/guilhermerodelli/cadastrofuncionarios
+Projeto desenvolvido para auxiliar no gerenciamento de funcionários, aplicando conceitos de Java, Spring Boot, PostgreSQL e desenvolvimento web em uma necessidade real.
